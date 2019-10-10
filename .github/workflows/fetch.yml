@@ -11,7 +11,7 @@ jobs:
     - name: fetch and push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        UPSTREAM: https://github.com/babel/babel
+        UPSTREAM: https://github.com/githubtraining/Nasa-Picture
       run: |       
         git checkout master
         git config --global user.name "github-actions"
