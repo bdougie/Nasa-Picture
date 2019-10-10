@@ -14,15 +14,17 @@ jobs:
         UPSTREAM: https://github.com/githubtraining/Nasa-Picture
       run: |       
         git config --global user.name "github-actions"
-        git config --global user.email "github-actions@users.noreply.github.com
+        git config --global user.email "github-actions@users.noreply.github.com"
         
         # inspired by https://dev.to/ranewallin/how-to-keep-your-forked-repository-current-38mn
         
         # If you haven't already added an upstream source, set your upstream
         # to the fork's original source
         git remote add upstream "${UPSTREAM}"
+        
         # Verify upstream is correct, you should see the URL for the upstream fetch and push 
         git remote -v
+        
         # Get all recent branches and commits from the upstream
         git fetch upstream
         
@@ -30,7 +32,7 @@ jobs:
         git merge upstream/master
         
         # Push the updated master to your forked remote repository
-        # git pull --rebase origin master
+        git pull --rebase origin master
                 
         # helpful for debugging
         git show-ref
