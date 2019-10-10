@@ -36,4 +36,6 @@ jobs:
         # Push the updated master to your forked remote repository
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         git pull --rebase origin master
-        git push -u origin master -v -f
+        git remote -v
+
+        # git push -u origin master -v -f
