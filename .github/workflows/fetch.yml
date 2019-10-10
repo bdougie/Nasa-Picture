@@ -17,6 +17,8 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@users.noreply.github.com"
         
+        git show-ref
+        
         # inspired by https://dev.to/ranewallin/how-to-keep-your-forked-repository-current-38mn
         
         # If you haven't already added an upstream source, set your upstream
