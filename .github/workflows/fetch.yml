@@ -22,6 +22,9 @@ jobs:
         # to the fork's original source
         git remote add upstream "${UPSTREAM}"
         
+        # Remote with access for pushing
+        git remote add fork "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        
         # Verify upstream is correct, you should see the URL for the upstream fetch and push 
         git remote -v
         
@@ -36,4 +39,4 @@ jobs:
         
         # Set upstream branch and push to the forked remote repo
         git checkout -b upstream
-        git push -u origin upstream
+        git push -u fork upstream
