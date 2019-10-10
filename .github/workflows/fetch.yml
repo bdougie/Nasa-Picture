@@ -35,7 +35,9 @@ jobs:
         # Push the updated master to your forked remote repository
         git remote add fork "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         git pull --rebase origin master
+        
+        git checkout -b upstream
 
         git show-ref
 
-        # git push -u fork master -f
+        # git push -u fork upstream -f
