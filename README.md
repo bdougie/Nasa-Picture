@@ -9,7 +9,7 @@ This is a test repo to develop actions against a sample java app
 9-19-19 Added the deployment to build a container and deploy to Kubernetes
 
 9-20-19 Added sed edits of pod yml to personalize each pod deployed.
-        (Still need a variable port)
+        (Still need a variable port)sdsd
 
         Changed application to randomize the day in the url sent to Nasa
         
