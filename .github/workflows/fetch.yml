@@ -36,3 +36,4 @@ jobs:
         
         # Set upstream branch and push to the forked remote repo
         git checkout -b upstream
+        git push -u origin master
