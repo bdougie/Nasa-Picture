@@ -13,7 +13,7 @@ This is a test repo to develop actions against a sample java app
 
         Changed application to randomize the day in the url sent to Nasa
         
-        Change the container name to be personalized to github student handle
+        Change the container name to be personalized to github student handledg
 dfsg
 Will still need to sanitize some of the file naming, and move this over to GitHub's dockerhub accofdsunt, but this is fully functional.
 
