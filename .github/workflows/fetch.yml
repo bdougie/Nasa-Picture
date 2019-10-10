@@ -4,16 +4,14 @@ on: pull_request
 
 jobs:
   fetch-upstream:
-    name: fetch
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: fetch and push
+    - name: fetch upstream
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         UPSTREAM: https://github.com/githubtraining/Nasa-Picture
       run: |       
-        git checkout master
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@users.noreply.github.com"
         
@@ -32,9 +30,10 @@ jobs:
         # Merge the branches and commits from the upstream
         git merge upstream/master
         
+        git status --porcelain
         # exit if there are no changes to commit
         [[ `git status --porcelain` ]] || exit
         
         # Push the updated master to your forked remote repository
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-        git push -u origin master
+        git push -u origin master -f
