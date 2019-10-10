@@ -17,6 +17,4 @@ This is a test repo to develop actions against a sample java app
 dfsg
 Will still need to sanitize some of the file naming, and move this over to GitHub's dockerhub accofdsunt, but this is fully functional.
 
-9-23-19 Rotating credentials. Will complete the job by tomorrow mid-morning.
-fds
-sdfasdfssdf
+
