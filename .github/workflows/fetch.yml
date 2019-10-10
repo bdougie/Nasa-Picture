@@ -13,7 +13,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         UPSTREAM: https://github.com/githubtraining/Nasa-Picture
       run: |       
-        git checkout master
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@users.noreply.github.com"
         
@@ -36,4 +35,5 @@ jobs:
         
         # Push the updated master to your forked remote repository
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        git pull --rebase origin master
         git push -u origin master
