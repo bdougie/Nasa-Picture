@@ -30,13 +30,9 @@ jobs:
         
         # Merge the branches and commits from the upstream
         git merge upstream/master
-        
-        # Push the updated master to your forked remote repository
-        git pull --rebase origin master
                 
         # helpful for debugging
         git show-ref
         
         # Set upstream branch and push to the forked remote repo
         git checkout -b upstream
-        git push -u origin upstream -f
