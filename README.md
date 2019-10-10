@@ -14,8 +14,8 @@ This is a test repo to develop actions against a sample java app
         Changed application to randomize the day in the url sent to Nasa
         
         Change the container name to be personalized to github student handle
-
-Will still need to sanitize some of the file naming, and move this over to GitHub's dockerhub account, but this is fully functional.
+dfsg
+Will still need to sanitize some of the file naming, and move this over to GitHub's dockerhub accofdsunt, but this is fully functional.
 
 9-23-19 Rotating credentials. Will complete the job by tomorrow mid-morning.
 fds
