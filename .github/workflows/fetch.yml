@@ -33,9 +33,9 @@ jobs:
         [[ `git status --porcelain` ]] || exit
         
         # Push the updated master to your forked remote repository
-        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        git remote add fork "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         git pull --rebase origin master
 
         git show-ref
 
-        # git push -u origin master -f
+        # git push -u fork master -f
